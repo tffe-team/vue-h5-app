@@ -1,5 +1,9 @@
-const path = require('path');
-const proEnv = require('./build/prod.env');
+const path = require('path')
+const proEnv = require('./build/prod.env')
+
+function resolve(dir) {
+  return path.join(__dirname, '.', dir)
+}
 const JsonAssetHtmlPlugin = require('./build/plugin/json-asset-html-webpack-plugin');
 
 module.exports = {
@@ -44,5 +48,16 @@ module.exports = {
                 subDir: proEnv.OUT_PATH
             }])
     }
+    config.module
+      .rule('svg-sprite-loader')
+      .test(/\.svg$/)
+      .include
+      .add(resolve('src/assets/svg')) //处理svg目录
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
  }
 }

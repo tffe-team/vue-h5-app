@@ -1,12 +1,12 @@
 import * as types from './mutation-types'
 import { ActionTree, Action } from 'vuex'
-import {sayHello} from '@/api'
+import {getList} from '@/api'
 
-const setHelloInfo: Action<object, object> = ({commit}, params) => {
+const getListData: Action<object, object> = ({commit}, params) => {
   return new Promise((resolve, reject) => {
-    sayHello(params, (res: any) => {
+    getList(params, (res: any) => {
       if (+res.status === 0) {
-        commit(types.HELLO_WORD, res.text)
+        commit(types.LIST, res.data)
         resolve(res.data)
       } else {
         reject(res.msg)
@@ -16,6 +16,6 @@ const setHelloInfo: Action<object, object> = ({commit}, params) => {
 }
 
 const actions: ActionTree<object, object> = {
-  setHelloInfo
+  getListData
 }
 export default actions

@@ -1,8 +1,8 @@
 import * as types from './mutation-types'
 
 const mutations = {
-  [types.HELLO_WORD](state: any, sayHello: string) {
-   state.sayHello = sayHello
+  [types.LIST](state: any, list: any[]) {
+   state.list = list
   }
 }
 export default mutations

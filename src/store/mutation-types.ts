@@ -1,1 +1,1 @@
-export const HELLO_WORD = 'HELLO_WORD'
+export const LIST = 'LIST'

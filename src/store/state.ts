@@ -1,4 +1,4 @@
 const state = {
-  sayHello: ''
+  list: []
 }
 export default state

@@ -1,1 +1,1 @@
-export const sayHello = (state: any) => state.sayHello
+export const list = (state: any) => state.list
