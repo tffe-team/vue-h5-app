@@ -27,6 +27,8 @@ export default class Welcome extends Vue {
         page_num: 1,
         per_page_num: 20
       })
+
+      console.log(123123123)
     }
   }
 }

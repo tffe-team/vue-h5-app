@@ -4,8 +4,6 @@ const proEnv = require('./build/prod.env')
 function resolve(dir) {
   return path.join(__dirname, '.', dir)
 }
-const JsonAssetHtmlPlugin = require('./build/plugin/json-asset-html-webpack-plugin');
-
 module.exports = {
   lintOnSave: process.env.NODE_ENV !== 'production',
   assetsDir: proEnv.OUT_PATH,
@@ -17,8 +15,7 @@ module.exports = {
       entry: './src/main.ts',
       template: 'index.html',
       filename: 'index.html',
-      title: 'h5模版',
-      chunks: ['chunk-vendors', 'chunk-common', 'app']
+      title: 'h5模版'
     }
   },
   devServer: {
@@ -40,14 +37,6 @@ module.exports = {
     }
   },
   chainWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
-        config
-            .plugin('html')
-            .use(JsonAssetHtmlPlugin, [{
-                path: config.output.baseUrl,
-                subDir: proEnv.OUT_PATH
-            }])
-    }
     config.module
       .rule('svg-sprite-loader')
       .test(/\.svg$/)
@@ -59,5 +48,5 @@ module.exports = {
       .options({
         symbolId: 'icon-[name]'
       })
- }
+  }
 }

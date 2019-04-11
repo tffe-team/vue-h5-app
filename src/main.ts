@@ -1,11 +1,9 @@
 import 'babel-polyfill'
 import Vue from 'vue'
+import FastClick from 'fastclick'
 import App from '@/App.vue'
 import router from './router'
 import store from './store'
-
-import FastClick from 'fastclick'
-
 FastClick.prototype.onTouchEnd = function(event: any) {
   if (event.target.hasAttribute('type') && event.target.getAttribute('type') === 'text') {
     event.preventDefault()
