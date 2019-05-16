@@ -6,13 +6,13 @@
 
 ``` bash
 # install dependencies
-rkit install
+rui-rkit install
 
 # serve with hot reload at localhost:8080
-rkit serve
+rui-rkit serve
 
 # build for production with minification
-rkit build
+rui-rkit build
 
 # build for production and view the bundle analyzer report
-rkit build --report
+rui-rkit build --report
