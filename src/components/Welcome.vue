@@ -9,37 +9,6 @@
           <div class="label flex">{{item.title}}</div>
         </li>
       </ul>
-      <ul class="rui-list">
-        <li class="item" v-for="(item, i) in list" :key="i">
-          <div class="label flex">{{item.title}}</div>
-        </li>
-      </ul>
-      <ul class="rui-list">
-        <li class="item" v-for="(item, i) in list" :key="i">
-          <div class="label flex">{{item.title}}</div>
-        </li>
-      </ul>
-      <ul class="rui-list">
-        <li class="item" v-for="(item, i) in list" :key="i">
-          <div class="label flex">{{item.title}}</div>
-        </li>
-      </ul>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <input type="text" />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
    </div>
  </div>
 </template>
