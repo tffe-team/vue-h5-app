@@ -32,8 +32,8 @@ export default class App extends Vue {
 .child-view {
   position: absolute;
   height: 100%;
-  // top: .4rem;
   width: 100%;
+  -webkit-overflow-scrolling: touch;
   transition: all .5s cubic-bezier(.55,0,.1,1);
 }
 .slide-left-enter, .slide-right-leave-active {
